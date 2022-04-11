@@ -5,42 +5,40 @@
 
   li {
     list-style: none;
-    button {
-      background: $background;
-      color: $primary_dark;
-      width: max-content;
-      height: max-content;
-      margin: 0.2rem;
-      padding: 0;
-      padding-right: 1rem;
+    background: $background;
+    color: $primary_dark;
+    width: max-content;
+    height: max-content;
+    margin: 0.2rem;
+    padding: 0;
+    padding-right: 1rem;
+    border-radius: 10rem;
+    border: none;
+    transition: all 0.1s ease;
+
+    span.badge {
+      background: $primary;
+      color: $background;
+      margin:0;
+      padding:0.4rem 0.5rem;
+      display: inline-block;
       border-radius: 10rem;
-      border: none;
-      transition: all 0.1s ease;
+      position: relative;
+      transition: all 0.2s ease;
+    }
+
+    &:hover, &.selected {
+      background: $background_dark;
+      cursor: pointer;
 
       span.badge {
-        background: $primary;
-        color: $background;
-        margin:0;
-        padding:0.4rem 0.5rem;
-        display: inline-block;
-        border-radius: 10rem;
-        position: relative;
-        transition: all 0.2s ease;
+        background: $primary_dark;
+        color: white;
       }
+    }
 
-      &:hover, &.selected {
-        background: $background_dark;
-        cursor: pointer;
-
-        span.badge {
-          background: $primary_dark;
-          color: white;
-        }
-      }
-
-      &.selected {
-        box-shadow: 1px 1px 2px 1px lightgrey;
-      }
+    &.selected {
+      box-shadow: 1px 1px 2px 1px lightgrey;
     }
   }
 }

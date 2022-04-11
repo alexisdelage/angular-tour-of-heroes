@@ -1,0 +1,19 @@
+@import "../_colors";
+
+nav {
+  a {
+    display: inline-block;
+    background-color: white;
+    padding: 0.2rem 0.5rem;
+    text-decoration: none;
+    color: $primary;
+    border-radius: 3px;
+    border: 1px solid $primary;
+    margin-right: 0.5rem;
+
+    &:hover {
+      background-color: $primary;
+      color: white;
+    }
+  }
+}
