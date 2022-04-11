@@ -1,10 +1,13 @@
+@import "../../_colors";
+
 .heroes {
   padding-left: 1rem;
 
   li {
     list-style: none;
     button {
-      background: #ddf;
+      background: $background;
+      color: $primary_dark;
       width: max-content;
       height: max-content;
       margin: 0.2rem;
@@ -15,7 +18,8 @@
       transition: all 0.1s ease;
 
       span.badge {
-        background: #88f;
+        background: $primary;
+        color: $background;
         margin:0;
         padding:0.4rem 0.5rem;
         display: inline-block;
@@ -25,11 +29,11 @@
       }
 
       &:hover, &.selected {
-        background: #88f;
+        background: $background_dark;
         cursor: pointer;
 
         span.badge {
-          background: #44f;
+          background: $primary_dark;
           color: white;
         }
       }
