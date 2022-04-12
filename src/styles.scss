@@ -25,20 +25,30 @@ button {
   border-radius: 4px;
   cursor: pointer;
   color: black;
-  font-size: 1.2rem;
-  padding: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
   margin-top: 1rem;
-}
-button:hover {
-  background-color: black;
-  color: white;
-}
-button:disabled {
-  background-color: #eee;
-  color: #aaa;
-  cursor: auto;
+  padding: 0.2rem 0.5rem;
+  margin-right: 0.3rem;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+  &:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: auto;
+  }
+  &.back:before {
+    content: "< ";
+  }
+  &.valid {
+    background-color: $valid;
+    color: white;
+    &:hover {
+      background-color: $valid_dark;
+    }
+  }
 }
 
 /* everywhere else */

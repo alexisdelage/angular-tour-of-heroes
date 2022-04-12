@@ -1,44 +1,63 @@
 @import "../../_colors";
 
+button {
+  margin-left: 0.3rem;
+}
+
 .heroes {
   padding-left: 1rem;
 
   li {
     list-style: none;
-    background: $background;
-    color: $primary_dark;
-    width: max-content;
-    height: max-content;
-    margin: 0.2rem;
-    padding: 0;
-    padding-right: 1rem;
-    border-radius: 10rem;
-    border: none;
-    transition: all 0.1s ease;
 
-    span.badge {
-      background: $primary;
-      color: $background;
-      margin:0;
-      padding:0.4rem 0.5rem;
-      display: inline-block;
+    a {
+      background: $background;
+      color: $primary_dark;
+      text-decoration: none;
+      width: max-content;
+      height: max-content;
+      margin: 0.2rem;
+      padding: 0;
+      padding-right: 1rem;
       border-radius: 10rem;
-      position: relative;
-      transition: all 0.2s ease;
-    }
-
-    &:hover, &.selected {
-      background: $background_dark;
-      cursor: pointer;
+      border: none;
+      display: inline-block;
+      transition: all 0.1s ease;
 
       span.badge {
-        background: $primary_dark;
-        color: white;
+        background: $primary;
+        color: $background;
+        margin:0;
+        padding:0.4rem 0.5rem;
+        display: inline-block;
+        border-radius: 10rem;
+        position: relative;
+        transition: all 0.2s ease;
+      }
+
+      &:hover, &.selected {
+        background: $background_dark;
+        cursor: pointer;
+
+        span.badge {
+          background: $primary_dark;
+          color: white;
+        }
+      }
+
+      &.selected {
+        box-shadow: 1px 1px 2px 1px lightgrey;
       }
     }
 
-    &.selected {
-      box-shadow: 1px 1px 2px 1px lightgrey;
+    button {
+      margin: 0;
+      border-radius: 10rem;
+
+      &:hover {
+        background-color: $danger;
+        color: white;
+      }
     }
   }
 }
